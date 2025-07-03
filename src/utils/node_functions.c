@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   node_functions.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hademirc <hademirc@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/07/03 16:49:27 by hademirc          #+#    #+#             */
+/*   Updated: 2025/07/03 16:49:32 by hademirc         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "string_utils.h"
 
 #include <stdlib.h>
@@ -66,7 +78,6 @@ char	node_insert(t_list **head, char *str, size_t len)
 	return (0);
 }
 
-// do not change this
 void	node_destroy_empty(t_list **head)
 {
 	t_list	*prev;
