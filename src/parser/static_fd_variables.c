@@ -1,8 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   static_fd_variables.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hademirc <hademirc@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/07/03 16:26:46 by hademirc          #+#    #+#             */
+/*   Updated: 2025/07/03 16:26:55 by hademirc         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
 #include <unistd.h>
 
-//static variable for save prev fd_pipe[0]
 int	*get_prev_pipe_read(void)
 {
 	static int	fd_prev_read = -1;
@@ -22,7 +33,6 @@ void	close_prev_pipe_read(void)
 	}
 }
 
-//static variable for save redirection fds
 int	*get_fd_redirection(void)
 {
 	static int	fd_redirection = -1;
