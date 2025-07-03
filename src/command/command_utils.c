@@ -1,10 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   command_utils.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hademirc <hademirc@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/07/03 16:24:15 by hademirc          #+#    #+#             */
+/*   Updated: 2025/07/03 16:24:16 by hademirc         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
 #include <unistd.h>
 #include <stdio.h>
 #include <sys/wait.h>
 
-//command_execute.c functions' error call
 t_uint8	error_child(char *cmd, char mode)
 {
 	write(STDERR_FILENO, "minishell: ", 11);
@@ -34,10 +45,6 @@ void	error_syscall(char *msg, char **end)
 		*end = NULL;
 }
 
-/*
- *	wait specific child (used only one command execution or
- *	last command execution of pipeline)
- */
 void	check_wait_status(pid_t pid)
 {
 	int	exit_status;

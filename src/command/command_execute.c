@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   command_execute.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hademirc <hademirc@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/07/03 16:24:22 by hademirc          #+#    #+#             */
+/*   Updated: 2025/07/03 16:24:23 by hademirc         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
 #include <unistd.h>
@@ -50,7 +62,6 @@ static t_uint8	search_path_and_call_execve(char **cmd_array)
 	return (error_child(cmd_array[0], 1));
 }
 
-//check relative or absolute path if not search path environment
 static t_uint8	call_execve(char **cmd_array)
 {
 	if (ft_strchr(cmd_array[0], '/'))
