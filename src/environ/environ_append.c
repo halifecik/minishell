@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   environ_append.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hademirc <hademirc@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/07/03 16:25:17 by hademirc          #+#    #+#             */
+/*   Updated: 2025/07/03 16:25:18 by hademirc         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
 #include <unistd.h>
@@ -58,16 +70,6 @@ static char	check_key_to_append(char **str, size_t *key_len)
 	return (0);
 }
 
-/* void	environ_append(char *str);
- *
- *	Checking whether the key should be appended or
- *	if it already exists in the environ array.
- *	Finding space by shifting the existing environment
- *	variables until it reaches the "?=" variable.
- *	Inserting the new variable in the correct position.
- *	Handling memory allocation failures by reverting the
- *	insertion if ft_strdup fails.
- */
 void	environ_append(char *str)
 {
 	size_t	key_len;

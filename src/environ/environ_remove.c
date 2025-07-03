@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   environ_remove.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hademirc <hademirc@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/07/03 16:25:23 by hademirc          #+#    #+#             */
+/*   Updated: 2025/07/03 16:25:24 by hademirc         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
 #include <stdlib.h>
@@ -19,15 +31,6 @@ static char	is_key_exist(size_t index, char *key, size_t key_len)
 	return (0);
 }
 
-/* void	environ_remove(char *str);
- *
- *	The function validates that the key is a proper
- *	environment variable key.
- *	Searches for the key in the environ array.
- *	Frees the memory allocated for the key if it is found.
- *	Shifts the remaining environment variables to fill the
- *	gap left by the removed key.
- */
 void	environ_remove(char *str)
 {
 	size_t	key_len;

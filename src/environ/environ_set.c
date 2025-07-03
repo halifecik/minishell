@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   environ_set.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hademirc <hademirc@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/07/03 16:25:34 by hademirc          #+#    #+#             */
+/*   Updated: 2025/07/03 16:25:35 by hademirc         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
 #include <unistd.h>
@@ -46,16 +58,6 @@ static void	environ_shlvl_increment(size_t *index)
 	(*index)++;
 }
 
-/* void	environ_set(void);
- *
- *	The function duplicates all the existing environment
- *	variables from the global environ array into new memory
- *	and adds to end a new environment variable "?=0". It
- *	then ensures the array is properly terminated by setting
- *	the next element to NULL.
- *	If any memory allocation fails during this process, the
- *	function will cause the program to exit with an error.
- */
 void	environ_set(void)
 {
 	size_t	index;
@@ -81,14 +83,6 @@ void	environ_set(void)
 	environ[index + 1] = NULL;
 }
 
-/* void	environ_destroy(void);
- *
- *	The function frees all environment variables until it
- *	encounters the "?=0" variable.
- *	After freeing the "?=0" variable, it search environment
- *	variables until it finds "PWD=", at which point it stops
- *	freeing and exits.
- */
 void	environ_destroy(void)
 {
 	size_t	index;
