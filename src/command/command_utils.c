@@ -6,7 +6,7 @@
 /*   By: hademirc <hademirc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 16:24:15 by hademirc          #+#    #+#             */
-/*   Updated: 2025/07/03 16:24:16 by hademirc         ###   ########.fr       */
+/*   Updated: 2025/07/03 16:45:45 by hademirc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <sys/wait.h>
+#include <signal.h>
 
 t_uint8	error_child(char *cmd, char mode)
 {
