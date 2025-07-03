@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   builtin_command_export.c                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hademirc <hademirc@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/07/03 16:22:56 by hademirc          #+#    #+#             */
+/*   Updated: 2025/07/03 16:23:04 by hademirc         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
 #include <unistd.h>
@@ -23,7 +35,6 @@ static void	write_output(char *str)
 	write(STDOUT_FILENO, "\n", 1);
 }
 
-//wrapper function for quick_sort()
 static int	compare_strings(const void *a, const void *b)
 {
 	const char	*s1;
