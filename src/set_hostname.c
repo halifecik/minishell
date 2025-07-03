@@ -12,7 +12,7 @@ static void	hostname_remove_newline(char *buffer)
 	newline = buffer;
 	while (*newline != '\0')
 	{
-		if (*newline == '\n')
+		if (*newline == '\n' || *newline == '.')
 		{
 			*newline = '\0';
 			return ;
