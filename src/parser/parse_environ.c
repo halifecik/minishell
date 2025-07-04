@@ -6,7 +6,7 @@
 /*   By: hademirc <hademirc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 16:26:18 by hademirc          #+#    #+#             */
-/*   Updated: 2025/07/03 16:26:19 by hademirc         ###   ########.fr       */
+/*   Updated: 2025/07/04 11:52:49 by hademirc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	check_environ(char **end, char **start, char in_quotes)
 	if (*start < *end && node_insert(get_cmd_list(), *start, *end - *start))
 		return ((void)break_parse(end));
 	*start = ++(*end);
-	while (ft_isalpha(**start) && ft_isalnum(**end))
+	while ((ft_isalpha(**start) && ft_isalnum(**end)) || **end == '_')
 		(*end)++;
 	if (*start == *end && (**end == '?' || ft_isalnum(**start)))
 		(*end)++;
